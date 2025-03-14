@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Registration</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-black text-black">
+<body class="bg-black text-white">
     <div class="min-h-screen flex items-center justify-center">
         <div class="bg-orange-500 p-8 rounded-lg shadow-lg w-full max-w-md">
             <h1 class="text-2xl font-bold mb-6 text-center text-black">Course Registration</h1>
@@ -35,7 +37,7 @@
 
                 <div class="mb-4">
                     <label class="block text-black">Date of Birth</label>
-                    <input type="date" name="dob" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                    <input type="text" name="dob" placeholder="Select Date" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" readonly>
                 </div>
 
                 <div class="mb-4">
@@ -46,7 +48,7 @@
                 <!-- Course-Specific Information -->
                 <div class="mb-4">
                     <label class="block text-black">Select Course</label>
-                    <select class="w-full px-4 py-2 border rounded-lg  bg-white focus:outline-none focus:ring-2 focus:ring-black" required>
+                    <select name="course" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black sm:text-sm">
                         <!-- Artisan Qualifications -->
                         <optgroup label="Artisan Qualifications (36 Months)">
                             <option value="bricklayer">Bricklayer - R5,000/pm</option>
@@ -66,7 +68,7 @@
                         <!-- National Certificate -->
                         <optgroup label="National Certificate">
                             <option value="plant-production">Plant Production - R1,800/pm (12 Months)</option>
-                            <option value="plant-production">Animal Production - R1,800/pm (12 Months)</option>
+                            <option value="animal-production">Animal Production - R1,800/pm (12 Months)</option>
                         </optgroup>
 
                         <!-- Firefighting and Safety -->
@@ -140,6 +142,16 @@
     </div>
 
     <script>
+
+
+         // Initialize Flatpickr for the Date of Birth field
+        flatpickr('input[name="dob"]', {
+            dateFormat: 'Y-m-d', // Format the date as YYYY-MM-DD
+            defaultDate: '2000-01-01', // Default date (optional)
+            maxDate: 'today', // Restrict selection to dates in the past
+            ariaDateFormat: 'F j, Y', // Accessible date format
+        });
+
         document.querySelector('form').addEventListener('submit', async (e) => {
             e.preventDefault(); 
 
