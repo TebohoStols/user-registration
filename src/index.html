@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-black text-black">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-orange-500 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h1 class="text-2xl font-bold mb-6 text-center text-black">Course Registration</h1>
+            <form>
+                <!-- Personal Information -->
+                <div class="mb-4">
+                    <label class="block text-black">Full Name</label>
+                    <input type="text" name="name" placeholder="Teboho Stols" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Email</label>
+                    <input type="email" name="email" placeholder="example@email.com" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="0712345678" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">ID/Passport Number</label>
+                    <input type="text" name="idNumber" placeholder="9501235487555" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Date of Birth</label>
+                    <input type="date" name="dob" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Physical Address</label>
+                    <input type="text" name="address" placeholder="123 Main Street, City, Postal Code" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <!-- Course-Specific Information -->
+                <div class="mb-4">
+                    <label class="block text-black">Select Course</label>
+                    <select class="w-full px-4 py-2 border rounded-lg  bg-white focus:outline-none focus:ring-2 focus:ring-black" required>
+                        <!-- Artisan Qualifications -->
+                        <optgroup label="Artisan Qualifications (36 Months)">
+                            <option value="bricklayer">Bricklayer - R5,000/pm</option>
+                            <option value="plumber">Plumber - R5,000/pm</option>
+                            <option value="welding">Welding - R5,000/pm</option>
+                        </optgroup>
+
+                        <!-- Skills Programs/Short Courses -->
+                        <optgroup label="Skills Programs/Short Courses">
+                            <option value="renewable-energy">Renewable Energy Solar - R20,000 (65 Days)</option>
+                            <option value="domestic-water">Domestic Water & Drainage - R18,500 (65 Days)</option>
+                            <option value="shielded-welding">Shielded Metal Arc Welder - R18,500 (65 Days)</option>
+                            <option value="plumbing-hand">Plumbing Hand - R18,500 (65 Days)</option>
+                            <option value="bricklayer-short">Bricklayer - R18,500 (55 Days)</option>
+                        </optgroup>
+
+                        <!-- National Certificate -->
+                        <optgroup label="National Certificate">
+                            <option value="plant-production">Plant Production - R1,800/pm (12 Months)</option>
+                            <option value="plant-production">Animal Production - R1,800/pm (12 Months)</option>
+                        </optgroup>
+
+                        <!-- Firefighting and Safety -->
+                        <optgroup label="Firefighting and Safety">
+                            <option value="firefighting">Firefighting - R10,000 (2 Weeks)</option>
+                            <option value="working-at-height">Working at Height - R4,500 (2 Days)</option>
+                            <option value="fall-protection">Fall Protection Plan - R4,500 (2 Days)</option>
+                            <option value="basic-rescues">Perform Basic Rescues - R4,500 (2 Days)</option>
+                            <option value="scaffolding">Scaffolding - R4,500 (3 Days)</option>
+                        </optgroup>
+
+                        <!-- Heavy Machinery -->
+                        <optgroup label="Heavy Machinery">
+                            <option value="front-end-loader">Operate a Front End Loader - R5,000 (2 Weeks)</option>
+                            <option value="backhoe-loader">Operate a Backhoe/Loader - R5,000 (2 Weeks)</option>
+                            <option value="grader">Operate a Grader - R5,000 (2 Weeks)</option>
+                            <option value="dump-truck">Operate a Rigid Body Dump Truck - R5,500 (2 Weeks)</option>
+                            <option value="scraper">Operate a Scraper - R6,000 (2 Weeks)</option>
+                            <option value="tip-truck">Operate a Tip Truck - R5,000 (2 Weeks)</option>
+                            <option value="tracked-dozer">Operate a Tracked Dozer - R5,000 (2 Weeks)</option>
+                            <option value="excavator">Operate an Excavator - R5,000 (2 Weeks)</option>
+                            <option value="forklift-novice">Counterbalanced Forklift (Novice) - R2,875</option>
+                            <option value="forklift-renewal">Counterbalanced Forklift (Renewal) - R850</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Previous Experience</label>
+                    <textarea name="experience" placeholder="Mention any relevant skills or experience (e.g., 2 years in construction, basic plumbing skills)" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Special Requirements</label>
+                    <textarea name="requirements" placeholder="Any medical conditions, special accommodations, or learning needs" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                </div>
+
+                <!-- Emergency Contact Information -->
+                <div class="mb-4">
+                    <label class="block text-black">Emergency Contact Name</label>
+                    <input type="text" name="emergencyName" placeholder="Jane Doe" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Emergency Contact Phone</label>
+                    <input type="tel" name="emergencyPhone" placeholder="0798765432" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-black">Relationship to Emergency Contact</label>
+                    <input type="text" name="emergencyRelationship" placeholder="Mother, Father, Sibling, etc." class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                </div>
+
+                <!-- How Did You Hear About Us? -->
+                <div class="mb-4">
+                    <label class="block text-black">How did you hear about us?</label>
+                    <select name="hearAboutUs" class="w-full px-4 py-2 border border-black rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-black" required>
+                        <option value="social_media">Social Media</option>
+                        <option value="friend">Friend</option>
+                        <option value="website">Website</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-black text-orange-500 py-2 rounded-lg hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+
+            const formData = {
+                name: document.querySelector('input[name="name"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                phone: document.querySelector('input[name="phone"]').value,
+                idNumber: document.querySelector('input[name="idNumber"]').value,
+                dob: document.querySelector('input[name="dob"]').value,
+                address: document.querySelector('input[name="address"]').value,
+                course: document.querySelector('select[name="course"]').value,
+                experience: document.querySelector('textarea[name="experience"]').value,
+                requirements: document.querySelector('textarea[name="requirements"]').value,
+                emergencyName: document.querySelector('input[name="emergencyName"]').value,
+                emergencyPhone: document.querySelector('input[name="emergencyPhone"]').value,
+                emergencyRelationship: document.querySelector('input[name="emergencyRelationship"]').value,
+                hearAboutUs: document.querySelector('select[name="hearAboutUs"]').value,
+            };
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ access_key: '6eb5813c-38bd-4360-b016-d823286cd134', ...formData }),
+                });
+
+                const data = await response.json();
+                alert(data.success ? 'Registration successful!' : 'Failed to register. Try again.');
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
